@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import pymysql
-from helpers import bind_field
-from query_builder import select, insert, delete, update
+from .helpers import bind_field
+from .query_builder import select, insert, delete, update
 
 
 class DB:

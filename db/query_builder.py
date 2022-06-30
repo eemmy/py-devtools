@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from helpers import bind_field
+from .helpers import bind_field
 
 """
     Builders to statements that are used for more than one query.
