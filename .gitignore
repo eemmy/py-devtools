@@ -1,0 +1,32 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Output logs files
+output.log
+
+# C extensions
+*.so
+
+# Dist stuff
+.eggs/
+*.egg-info/
+*.egg
+.wheels/
+.eggs
+.Python
+*.manifest
+*.spec
+build/
+MANIFEST
+
+# Environments
+env/
+venv/
+.env
+.venv
+
+# Editors stuff
+.idea
+.vscode
