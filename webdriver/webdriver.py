@@ -3,8 +3,8 @@ from time import sleep
 from selenium.webdriver import Chrome, ChromeOptions
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-from helpers import concat_urls
-from webelement import WebElement
+from .helpers import concat_urls
+from .webelement import WebElement
 
 
 class Webdriver:
