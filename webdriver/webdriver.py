@@ -226,6 +226,8 @@ class Webdriver:
 
             for el in elements:
                 prototyped_elements.append(self.prototype_element(el))
+
+            return prototyped_elements
         except:
             return []
 
@@ -240,6 +242,8 @@ class Webdriver:
 
             for el in elements:
                 prototyped_elements.append(self.prototype_element(el))
+
+            return prototyped_elements
         except:
             return []
 
