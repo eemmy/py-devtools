@@ -11,7 +11,7 @@ class WebElement:
         self.class_list = self.selenium_element.get_attribute('class') or None
         self.id = self.selenium_element.get_attribute('id') or None
         self.href = self.selenium_element.get_attribute('href') or None
-        self.src = self.selenium_element.get_attribute('href') or None
+        self.src = self.selenium_element.get_attribute('src') or None
 
         if isinstance(self.class_list, str):
             self.class_list = self.class_list.split(' ')
