@@ -22,6 +22,8 @@ class DB:
             'update': update(),
         }
 
+        self.last_inserted_id = None
+
     """
         Run a SELECT query expecting only one result returned.
     """
@@ -30,7 +32,7 @@ class DB:
         return_data = None
 
         with self.conn.cursor() as cursor:
-            cursor.execute(query)
+            cursor.execute(query['query'], query['binds'])
             data = cursor.fetchone()
 
             if data:
@@ -45,8 +47,6 @@ class DB:
     def find_many(self, params: dict):
         query = self.builders['select'].build(params)
         return_data = []
-
-        print(query['binds'])
 
         with self.conn.cursor() as cursor:
             cursor.execute(query['query'], query['binds'])
@@ -68,6 +68,9 @@ class DB:
         with self.conn.cursor() as cursor:
             returnData = cursor.execute(query['query'], query['binds'])
             self.conn.commit()
+
+            if cursor.lastrowid:
+                self.last_inserted_id = int(cursor.lastrowid)
 
         return returnData
 
